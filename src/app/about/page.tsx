@@ -50,7 +50,7 @@ export default function AboutPage() {
                   { value: "10+", label: "Years Experience" },
                   { value: "500+", label: "Active Clients" },
                   { value: "99.9%", label: "Uptime" },
-                  { value: "24/7", label: "Support" },
+                  { value: "N-S", label: "Support" },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-zinc-50 dark:bg-zinc-800 rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stat.value}</div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
                   "ICASA Licensed Telecommunications Provider",
                   "Experienced engineers and technical staff",
                   "Enterprise-grade infrastructure",
-                  "24/7 technical support available",
+                  "Technical support available",
                   "Number portability for VoIP services",
                   "Nationwide coverage and connectivity",
                 ].map((item, i) => (

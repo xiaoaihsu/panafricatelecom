@@ -57,7 +57,7 @@ export const heroSlides = [
   },
   {
     title: "IT Services & Support",
-    subtitle: "24/7 Technical Assistance",
+    subtitle: "Technical Assistance",
     description: "Professional IT support and managed services for businesses of all sizes.",
     cta: "Get Support",
     ctaLink: "/support",
@@ -109,7 +109,7 @@ export const stats = [
   { value: "10+", label: "Years Experience" },
   { value: "500+", label: "Active Clients" },
   { value: "99.9%", label: "Uptime" },
-  { value: "24/7", label: "Support" },
+  { value: "N-S", label: "Support" },
 ];
 
 // Why Choose Us
@@ -117,7 +117,7 @@ export const whyChooseUs = [
   "ICASA Licensed Telecommunications Provider",
   "Experienced engineers and technical staff",
   "Enterprise-grade infrastructure",
-  "24/7 technical support",
+  "Technical support available",
   "Number portability available",
   "Nationwide coverage",
 ];

@@ -45,14 +45,14 @@ const stats = [
   { value: "10+", label: "Years Experience" },
   { value: "500+", label: "Active Clients" },
   { value: "99.9%", label: "Uptime" },
-  { value: "24/7", label: "Support" },
+  { value: "N-S", label: "Support" },
 ];
 
 const whyChooseUs = [
   "ICASA Licensed Telecommunications Provider",
   "Experienced engineers and technical staff",
   "Enterprise-grade infrastructure",
-  "24/7 technical support",
+  "Technical support available",
   "Number portability available",
   "Nationwide coverage",
 ];
@@ -205,17 +205,19 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { name: "5G CPE Router", price: "R2,499" },
-                { name: "WiFi 6 AP", price: "R1,299" },
-                { name: "4MP IP Camera", price: "R899" },
-                { name: "400W Solar Panel", price: "R4,299" },
+                { name: "5G CPE Router", price: "R2,499", img: "https://ueeshop.ly200-cdn.com/u_file/UPAY/UPAY581/2512/16/products/4-114113ff70.jpg?x-oss-process=image/format,webp/quality,q_100/resize,m_lfit,h_1000,w_1000" },
+                { name: "WiFi 6 AP", price: "R1,299", img: "https://ueeshop.ly200-cdn.com/u_file/UPAY/UPAY581/2512/16/products/4-114113ff70.jpg?x-oss-process=image/format,webp/quality,q_100/resize,m_lfit,h_1000,w_1000" },
+                { name: "4MP IP Camera", price: "R899", img: "https://ueeshop.ly200-cdn.com/u_file/UPAY/UPAY581/2512/16/products/4-114113ff70.jpg?x-oss-process=image/format,webp/quality,q_100/resize,m_lfit,h_1000,w_1000" },
+                { name: "400W Solar Panel", price: "R4,299", img: "https://ueeshop.ly200-cdn.com/u_file/UPAY/UPAY581/2512/16/products/4-114113ff70.jpg?x-oss-process=image/format,webp/quality,q_100/resize,m_lfit,h_1000,w_1000" },
               ].map((item) => (
-                <div key={item.name} className="bg-zinc-800 rounded-xl p-4 text-center">
-                  <div className="w-full h-32 bg-zinc-700 rounded-lg mb-3 flex items-center justify-center text-zinc-500">
-                    Product Image
+                <div key={item.name} className="bg-zinc-800 rounded-xl overflow-hidden text-center">
+                  <div className="aspect-square bg-zinc-700 relative">
+                    <img src={item.img} alt={item.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                   </div>
-                  <p className="font-medium text-sm">{item.name}</p>
-                  <p className="text-blue-400 font-bold">{item.price}</p>
+                  <div className="p-3">
+                    <p className="font-medium text-sm">{item.name}</p>
+                    <p className="text-blue-400 font-bold text-sm">{item.price}</p>
+                  </div>
                 </div>
               ))}
             </div>

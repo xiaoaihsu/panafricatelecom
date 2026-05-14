@@ -17,7 +17,7 @@ const features = [
   "Business Fibre connections",
   "VoIP and cloud telephony",
   "Site-to-site VPN connectivity",
-  "24/7 technical support",
+  "Technical support",
   "Static IP addresses available",
 ];
 

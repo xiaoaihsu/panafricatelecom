@@ -53,9 +53,7 @@ export function Footer() {
           {/* Company */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">PAT</span>
-              </div>
+              <img src="/logo.png" alt="Pan Africa Telecom" className="h-10 w-auto" />
               <span className="font-bold text-lg text-white">Pan Africa Telecom</span>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
