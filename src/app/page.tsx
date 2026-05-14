@@ -212,7 +212,7 @@ export default function HomePage() {
               ].map((item) => (
                 <div key={item.name} className="bg-zinc-800 rounded-xl overflow-hidden text-center">
                   <div className="aspect-square bg-zinc-700 relative">
-                    <img src={item.img} alt={item.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <img src={item.img} alt={item.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-3">
                     <p className="font-medium text-sm">{item.name}</p>
