@@ -21,6 +21,7 @@ export const products: Product[] = [
     longDescription: "Experience lightning-fast 5G connectivity with our enterprise-grade CPE router. Supports up to 64 connected devices with dual-band WiFi 6, making it ideal for homes and small businesses in areas without fibre coverage.",
     category: "connectivity",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    images: [],
     stock: 15,
     features: [
       "5G SA/NSA support",
@@ -41,6 +42,7 @@ export const products: Product[] = [
     category: "connectivity",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
     stock: 22,
+    images: [],
     features: [
       "WiFi 6 (1800Mbps)",
       "MU-MIMO 4x4",
@@ -60,6 +62,7 @@ export const products: Product[] = [
     category: "connectivity",
     image: "https://images.unsplash.com/photo-1606904825846-647eb07bc5d8?w=600&h=400&fit=crop",
     stock: 18,
+    images: [],
     features: [
       "8x Gigabit PoE+",
       "120W total budget",
@@ -80,6 +83,7 @@ export const products: Product[] = [
     category: "cctv",
     image: "https://images.unsplash.com/photo-1557862921-37829b5c4c37?w=600&h=400&fit=crop",
     stock: 35,
+    images: [],
     features: [
       "4MP (2688x1520)",
       "30m IR night vision",
@@ -99,6 +103,7 @@ export const products: Product[] = [
     category: "cctv",
     image: "https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=600&h=400&fit=crop",
     stock: 12,
+    images: [],
     features: [
       "8-channel 4K",
       "2TB HDD (expandable)",
@@ -119,6 +124,7 @@ export const products: Product[] = [
     category: "renewable",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
     stock: 20,
+    images: [],
     features: [
       "400W output",
       "21% efficiency",
@@ -138,6 +144,7 @@ export const products: Product[] = [
     category: "renewable",
     image: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=600&h=400&fit=crop",
     stock: 8,
+    images: [],
     features: [
       "3000W continuous",
       "MPPT controller",
@@ -158,6 +165,7 @@ export const products: Product[] = [
     category: "voip",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
     stock: 40,
+    images: [],
     features: [
       "HD audio",
       "4.3\" color LCD",
@@ -178,6 +186,7 @@ export const products: Product[] = [
     category: "equipment",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
     stock: 50,
+    images: [],
     features: [
       "60W PoE++",
       "Gigabit speeds",
@@ -197,6 +206,7 @@ export const products: Product[] = [
     category: "equipment",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
     stock: 60,
+    images: [],
     features: [
       "Cat6 compliant",
       "100m length",
