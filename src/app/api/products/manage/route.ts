@@ -33,6 +33,7 @@ export async function PUT(req: NextRequest) {
       longDescription: body.longDescription ?? existing.longDescription,
       category: body.category ?? existing.category,
       image: body.image ?? existing.image,
+      images: Array.isArray(body.images) ? body.images : (existing.images || []),
       stock: Number(body.stock) ?? existing.stock,
       features: Array.isArray(body.features) ? body.features : existing.features,
     };
