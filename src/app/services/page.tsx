@@ -8,6 +8,7 @@ const services = [
     title: "Global Connectivity",
     subtitle: "MPLS VPN / SDWAN / IEPL",
     description: "Enterprise-grade connectivity solutions connecting your business across Africa and globally. Our network infrastructure delivers reliable, low-latency connections for mission-critical applications.",
+    image: "https://images.unsplash.com/photo-1548678969-f1e5b252e0e7?w=800&q=80",
     features: [
       "MPLS VPN for site-to-site connectivity",
       "SDWAN for intelligent traffic routing",
@@ -24,6 +25,7 @@ const services = [
     title: "IT Services",
     subtitle: "Managed IT & Technical Support",
     description: "Professional IT support and managed services for businesses of all sizes. Our experienced team provides proactive monitoring, maintenance, and rapid response to keep your systems running.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
     features: [
       "Network design and implementation",
       "24/7 technical support",
@@ -40,6 +42,7 @@ const services = [
     title: "Equipment Distribution",
     subtitle: "Enterprise & ISP Hardware",
     description: "Leveraging our affiliate resources, we distribute equipment and materials to Enterprises, ISPs, and Telecommunications providers across Sub-Saharan Africa. All equipment comes with technical support.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
     features: [
       "5G/LTE routers and CPEs",
       "WiFi access points and controllers",
@@ -56,6 +59,7 @@ const services = [
     title: "VoIP / SMS / A2P",
     subtitle: "Voice & Messaging Solutions",
     description: "Cost-effective VoIP solutions for home and business. Move your existing Telkom number onto our service and save on calls. We also provide SMS and A2P messaging services for enterprises.",
+    image: "https://images.unsplash.com/photo-155Knh8cSwPcje7TIm5bjNMhHXA?w=800&q=80",
     features: [
       "Number portability (Telkom to VoIP)",
       "Unlimited local calls",
@@ -72,6 +76,7 @@ const services = [
     title: "CCTV Installation",
     subtitle: "Surveillance & Security",
     description: "Professional CCTV supply and installation for homes and businesses. We provide end-to-end surveillance solutions with remote monitoring capabilities and cloud storage options.",
+    image: "https://images.unsplash.com/photo-1557862921-37829c790f19?w=800&q=80",
     features: [
       "4MP to 8MP IP cameras",
       "NVR with AI detection",
@@ -88,6 +93,7 @@ const services = [
     title: "Renewable Energy",
     subtitle: "Solar & Battery Solutions",
     description: "Solar panel and inverter installation for off-grid and backup power solutions. Perfect for areas with unreliable grid power or for businesses looking to reduce energy costs and carbon footprint.",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
     features: [
       "400W to 550W solar panels",
       "Hybrid and off-grid inverters",
@@ -148,11 +154,12 @@ export default function ServicesPage() {
                   {service.cta} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-              <div className={`bg-zinc-100 dark:bg-zinc-800 rounded-2xl aspect-video flex items-center justify-center ${index % 2 === 1 ? "md:order-1" : ""}`}>
-                <div className="text-center text-zinc-400">
-                  <service.icon className="w-16 h-16 mx-auto mb-4 opacity-50" />
-                  <p className="text-sm">{service.title} Illustration</p>
-                </div>
+              <div className={`bg-zinc-100 dark:bg-zinc-800 rounded-2xl aspect-video flex items-center justify-center overflow-hidden ${index % 2 === 1 ? "md:order-1" : ""}`}>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           ))}
