@@ -7,6 +7,7 @@ export interface Product {
   longDescription: string;
   category: "connectivity" | "equipment" | "cctv" | "renewable" | "voip";
   image: string;
+  images: string[];
   stock: number;
   features: string[];
 }

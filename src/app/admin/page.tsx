@@ -170,10 +170,22 @@ function ProductModal({
   onSave: (product: Partial<Product>) => Promise<void>;
 }) {
   const [form, setForm] = useState<Partial<Product>>(
-    product || { name: "", price: 0, description: "", longDescription: "", category: "connectivity", image: "", stock: 0, features: [] }
+    product || { name: "", price: 0, description: "", longDescription: "", category: "connectivity", image: "", images: [], stock: 0, features: [] }
   );
+  const [imageInput, setImageInput] = useState("");
   const [featureInput, setFeatureInput] = useState("");
   const [saving, setSaving] = useState(false);
+
+  const handleAddImage = () => {
+    if (imageInput.trim()) {
+      setForm((f) => ({ ...f, images: [...(f.images || []), imageInput.trim()] }));
+      setImageInput("");
+    }
+  };
+
+  const handleRemoveImage = (index: number) => {
+    setForm((f) => ({ ...f, images: (f.images || []).filter((_, i) => i !== index) }));
+  };
 
   const handleSaveFeature = () => {
     if (featureInput.trim()) {
@@ -242,6 +254,28 @@ function ProductModal({
             <input type="url" value={form.image || ""} onChange={(e) => setForm((f) => ({ ...f, image: e.target.value }))}
               className="w-full px-4 py-2.5 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white focus:ring-2 focus:ring-blue-500"
               placeholder="https://images.unsplash.com/..." />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">Additional Images</label>
+            <div className="flex gap-2 mb-2">
+              <input type="url" value={imageInput} onChange={(e) => setImageInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), handleAddImage())}
+                className="flex-1 px-4 py-2.5 border border-zinc-300 dark:border-zinc-600 rounded-lg bg-white dark:bg-zinc-700 text-zinc-900 dark:text-white focus:ring-2 focus:ring-blue-500"
+                placeholder="https://images.unsplash.com/..." />
+              <button type="button" onClick={handleAddImage} className="px-4 py-2.5 bg-zinc-100 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-600 font-medium text-sm">
+                Add
+              </button>
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {(form.images || []).map((img, i) => (
+                <div key={i} className="relative group aspect-square rounded-lg overflow-hidden border border-zinc-200 dark:border-zinc-600">
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <button type="button" onClick={() => handleRemoveImage(i)} className="absolute top-1 right-1 bg-black/60 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
           <div>
             <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1">Short Description *</label>

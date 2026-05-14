@@ -16,11 +16,16 @@ export default function ProductPage() {
   const [loading, setLoading] = useState(true);
   const [added, setAdded] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
     fetch(`/api/products/${slug}`)
       .then((r) => r.json())
-      .then((data) => { setProduct(data.id ? data : null); setLoading(false); })
+      .then((data) => {
+        setProduct(data.id ? data : null);
+        if (data.id) setSelectedImage(data.image);
+        setLoading(false);
+      })
       .catch(() => { setProduct(null); setLoading(false); });
   }, [slug]);
 
@@ -68,13 +73,34 @@ export default function ProductPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Image */}
-          <div className="aspect-square bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-cover"
-              onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-            />
+          <div className="space-y-3">
+            <div className="aspect-square bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-700">
+              <img
+                src={selectedImage || product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+            </div>
+            {product.images && product.images.length > 0 && (
+              <div className="flex gap-2 overflow-x-auto pb-1">
+                <button
+                  onClick={() => setSelectedImage(product.image)}
+                  className={cn("shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors", selectedImage === product.image ? "border-blue-500" : "border-transparent opacity-60 hover:opacity-100")}
+                >
+                  <img src={product.image} alt="Main" className="w-full h-full object-cover" />
+                </button>
+                {product.images.map((img, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setSelectedImage(img)}
+                    className={cn("shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors", selectedImage === img ? "border-blue-500" : "border-transparent opacity-60 hover:opacity-100")}
+                  >
+                    <img src={img} alt="" className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Details */}
