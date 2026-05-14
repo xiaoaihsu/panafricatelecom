@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ORD-1004",
+    "items": [
+      {
+        "productId": "8",
+        "name": "VoIP Desk Phone",
+        "price": 699,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+      }
+    ],
+    "total": 699,
+    "customer": {
+      "name": "Andy",
+      "email": "admin@panafricatelecom.co.za",
+      "phone": "0340085088",
+      "address": "To test VAT issue",
+      "city": "Newcastle",
+      "postalCode": "2940"
+    },
+    "paymentMethod": "eft",
+    "status": "pending",
+    "createdAt": "2026-05-09T18:03:04.711Z"
+  },
+  {
+    "id": "ORD-1003",
+    "items": [
+      {
+        "productId": "2",
+        "name": "WiFi 6 Access Point",
+        "price": 1299,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop"
+      }
+    ],
+    "total": 2598,
+    "customer": {
+      "name": "Andy",
+      "email": "admin@panafricatelecom.co.za",
+      "phone": "0340085088",
+      "address": "123JHB",
+      "city": "Newcastle",
+      "postalCode": "2940"
+    },
+    "paymentMethod": "eft",
+    "status": "pending",
+    "createdAt": "2026-05-09T17:54:54.284Z"
+  },
+  {
+    "id": "ORD-1002",
+    "items": [
+      {
+        "productId": "1",
+        "name": "5G CPE Router",
+        "price": 2499,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+      }
+    ],
+    "total": 4998,
+    "customer": {
+      "name": "Andy",
+      "email": "admin@panafricatelecom.co.za",
+      "phone": "0340085088",
+      "address": "123 JHB",
+      "city": "Newcastle",
+      "postalCode": "2940"
+    },
+    "paymentMethod": "payfast",
+    "status": "pending",
+    "createdAt": "2026-05-09T16:45:03.898Z"
+  },
+  {
+    "id": "ORD-1001",
+    "items": [
+      {
+        "productId": "1",
+        "name": "5G CPE Router",
+        "price": 2499,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
+      }
+    ],
+    "total": 2499,
+    "customer": {
+      "name": "Andy",
+      "email": "andy@panafricatelecom.co.za",
+      "phone": "0711524893",
+      "address": "123 Newcastle",
+      "city": "Newcastle",
+      "postalCode": "2940"
+    },
+    "paymentMethod": "payfast",
+    "status": "pending",
+    "createdAt": "2026-05-09T16:32:08.095Z"
+  }
+]
