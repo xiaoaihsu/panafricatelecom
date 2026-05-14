@@ -36,7 +36,7 @@ const slides: Slide[] = [
   },
   {
     title: "IT Services & Support",
-    subtitle: "24/7 Technical Assistance",
+    subtitle: "Technical Assistance",
     description: "Professional IT support and managed services for businesses of all sizes.",
     cta: "Get Support",
     ctaLink: "/support",

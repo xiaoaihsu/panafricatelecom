@@ -16,7 +16,6 @@ const supportOptions = [
     desc: "Speak to our technical support team. Available Mon-Fri 8am-5pm, Sat 9am-1pm.",
     action: "Call 034-0085055",
     href: "tel:0340085055",
-    badge: "24/7 Priority",
   },
   {
     icon: Mail,
@@ -124,7 +123,7 @@ export default function SupportPage() {
                       <span className="font-medium text-red-500">Closed</span>
                     </div>
                   </div>
-                  <p className="text-xs text-zinc-500 mt-3">Emergency outages are handled 24/7 via our emergency line.</p>
+                  <p className="text-xs text-zinc-500 mt-3">Emergency outages are handled via our emergency line.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

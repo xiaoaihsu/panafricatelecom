@@ -14,7 +14,7 @@ const services = [
       "SDWAN for intelligent traffic routing",
       "IEPL for dedicated ethernet services",
       "BGP peering and transit services",
-      "24/7 network monitoring",
+      "network monitoring",
     ],
     cta: "Explore Connectivity Solutions",
     ctaLink: "/services/global-connectivity",
@@ -28,7 +28,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
     features: [
       "Network design and implementation",
-      "24/7 technical support",
+      "technical support",
       "Server and infrastructure management",
       "Cloud migration services",
       "Cybersecurity solutions",
