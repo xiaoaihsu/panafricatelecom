@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       longDescription: body.longDescription || body.description || "",
       category: body.category || "equipment",
       image: body.image || "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+      images: Array.isArray(body.images) ? body.images : [],
       stock: Number(body.stock) || 0,
       features: Array.isArray(body.features) ? body.features : [],
     };
