@@ -7,6 +7,7 @@ import { ArrowLeft, ShoppingCart, Check, Truck, Star } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { Product } from "@/lib/types";
+import { shippingWarranty } from "@/lib/config";
 
 export default function ProductPage() {
   const params = useParams();
@@ -177,14 +178,18 @@ export default function ProductPage() {
 
             {/* Shipping info */}
             <div className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
-              <div className="flex items-center gap-2">
-                <Truck className="w-4 h-4" />
-                Delivery within 3-5 business days
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4" />
-                12-month warranty included
-              </div>
+              {shippingWarranty.delivery && (
+                <div className="flex items-center gap-2">
+                  <Truck className="w-4 h-4" />
+                  {shippingWarranty.delivery}
+                </div>
+              )}
+              {shippingWarranty.warranty && (
+                <div className="flex items-center gap-2">
+                  <Star className="w-4 h-4" />
+                  {shippingWarranty.warranty}
+                </div>
+              )}
             </div>
           </div>
         </div>

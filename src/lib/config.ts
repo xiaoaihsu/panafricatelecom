@@ -23,6 +23,12 @@ export const company = {
   icasaLicense: "2411/CECNS/CECS/FEB/2023",
 };
 
+// Shipping & Warranty (shown on product pages)
+export const shippingWarranty = {
+  delivery: "Delivery within 3-5 business days",  // Change or empty to hide
+  warranty: "12-month warranty included",          // Change or empty to hide
+};
+
 // Navigation Links
 export const navLinks = [
   { href: "/", label: "Home" },
