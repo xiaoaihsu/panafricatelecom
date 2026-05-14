@@ -41,7 +41,13 @@ export async function POST(req: NextRequest) {
     // ── Logout ─────────────────────────────────────────
     if (action === "logout") {
       const response = NextResponse.json({ success: true });
-      response.cookies.set("pat_session", "", { httpOnly: true, maxAge: 0, path: "/" });
+      response.cookies.set("pat_session", "", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        maxAge: 0,
+        path: "/",
+      });
       return response;
     }
 
